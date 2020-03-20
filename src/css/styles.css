@@ -198,9 +198,28 @@ img {
           background-color: #fbdfdb;
           transition: all 300ms linear; }
 
+.wrap-footer {
+  width: 100%;
+  padding: 23px;
+  background-color: #EEEEEE; }
+
 .main-navbar {
   width: 100%;
   max-width: 940px;
   margin: 0 auto;
   display: flex;
   align-items: center; }
+
+.main-footer {
+  width: 100%;
+  max-width: 900px;
+  background-color: transparent;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .main-footer .content {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: normal;
+    font-size: 1.4rem;
+    color: #999999; }
