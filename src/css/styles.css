@@ -162,8 +162,7 @@ img {
 
 .brand-navbar {
   width: 91px;
-  height: 27px;
-  margin-right: 100px; }
+  height: 27px; }
   .brand-navbar .action {
     width: 100%;
     height: 100%; }
@@ -175,15 +174,17 @@ img {
   width: 100%;
   height: auto;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  justify-content: flex-end; }
   .nav-bar .menu {
     list-style: none;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    justify-content: flex-end; }
     .nav-bar .menu .item {
       padding: 10px; }
-      .nav-bar .menu .item:not(:last-child) {
-        margin-right: 40px; }
+      .nav-bar .menu .item:not(:first-child) {
+        margin-left: 30px; }
       .nav-bar .menu .item .action {
         font-family: "Roboto", "Arial", sans-serif;
         font-size: 1.6rem;
@@ -191,17 +192,33 @@ img {
         color: #111111;
         text-decoration: none;
         background-color: rgba(251, 223, 219, 0);
-        padding: 10px;
+        border-radius: 5px;
         transition: all 300ms linear;
         cursor: pointer; }
-        .nav-bar .menu .item .action:hover {
-          background-color: #fbdfdb;
-          transition: all 300ms linear; }
+        @media (min-width: 768px) {
+          .nav-bar .menu .item .action {
+            width: 100%;
+            height: 100%;
+            padding: 10px; }
+            .nav-bar .menu .item .action:hover {
+              background-color: #fbdfdb;
+              transition: all 300ms linear; } }
+      @media (min-width: 768px) {
+        .nav-bar .menu .item:not(:first-child) {
+          margin-left: 0; } }
+  @media (min-width: 576px) {
+    .nav-bar {
+      justify-content: flex-start;
+      padding-left: 100px; } }
 
 .wrap-footer {
   width: 100%;
   padding: 23px;
   background-color: #EEEEEE; }
+
+.wrap-banner {
+  width: 100%;
+  background-color: #FFFFFF; }
 
 .main-navbar {
   width: 100%;
@@ -223,3 +240,68 @@ img {
     font-weight: normal;
     font-size: 1.4rem;
     color: #999999; }
+
+.main-banner {
+  position: relative;
+  width: 100%;
+  height: 366px;
+  background-color: #FBDFDB;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .main-banner:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 216px;
+    height: 300px;
+    background-image: url(../img/chef.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.2; }
+  .main-banner .overlay-banner {
+    position: relative; }
+    .main-banner .overlay-banner .title {
+      font-family: "Roboto", "Arial", sans-serif;
+      font-weight: bold;
+      font-size: 3.2rem;
+      color: #111111;
+      margin-bottom: 10px;
+      text-align: center; }
+      @media (min-width: 768px) {
+        .main-banner .overlay-banner .title {
+          text-align: left; } }
+    .main-banner .overlay-banner .description {
+      font-family: "Roboto", "Arial", sans-serif;
+      font-weight: normal;
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+      color: #000000;
+      text-align: center;
+      padding: 0 30px; }
+      @media (min-width: 768px) {
+        .main-banner .overlay-banner .description {
+          text-align: left;
+          padding: 0; } }
+    @media (min-width: 768px) {
+      .main-banner .overlay-banner {
+        width: 60%;
+        max-width: 316px;
+        position: absolute; } }
+  @media (min-width: 768px) {
+    .main-banner {
+      justify-content: flex-start;
+      padding-left: 60px; }
+      .main-banner:before {
+        left: auto;
+        right: 0;
+        background-position: bottom right;
+        opacity: 1; } }
+  @media (min-width: 992px) {
+    .main-banner {
+      max-width: 940px;
+      margin: 0 auto;
+      border-radius: 30px; } }
