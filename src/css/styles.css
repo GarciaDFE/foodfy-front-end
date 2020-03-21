@@ -222,10 +222,6 @@ img {
   width: 100%;
   background-color: #FFFFFF; }
 
-.wrap-recipes {
-  width: 100%;
-  padding: 50px 0 20px; }
-
 .card-recipe {
   width: 100%;
   max-width: 300px;
@@ -351,30 +347,35 @@ img {
 .main-recipes {
   width: 100%;
   max-width: 940px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
+  margin: 0 auto; }
   .main-recipes .title {
     font-family: "Roboto", "Arial", sans-serif;
     font-size: 2.4rem;
     font-weight: bold;
     color: #111111;
-    margin-bottom: 20px; }
+    text-align: center;
+    padding-top: 50px; }
+  .main-recipes .wrap-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0; }
   @media (min-width: 576px) {
-    .main-recipes {
+    .main-recipes .wrap-cards {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-around;
       align-items: flex-start;
-      padding: 0 10px; }
-      .main-recipes .title {
-        width: 100%;
-        align-self: flex-start; } }
+      padding: 20px 10px; }
+    .main-recipes .title {
+      width: 100%;
+      align-self: flex-start; } }
   @media (min-width: 992px) {
-    .main-recipes {
+    .main-recipes .wrap-cards {
       justify-content: space-between;
-      padding: 0; } }
+      padding: 20px 0; }
+    .main-recipes .title {
+      text-align: left; } }
 
 .main-sobre {
   width: 100%;
