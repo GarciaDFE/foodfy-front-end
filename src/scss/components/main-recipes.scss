@@ -1,0 +1,31 @@
+.main-recipes {
+   width: 100%;
+   max-width: 940px;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   .title {
+      font-family: $font-primary;
+      font-size: 2.4rem;
+      font-weight: bold;
+      color: $color-primary-dark;
+      margin-bottom: 20px;
+   }
+
+   @include mq(sm) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding: 0 10px;
+      .title {
+         width: 100%;
+         align-self: flex-start;
+      }
+   }
+   @include mq(lg) {
+      justify-content: space-between;
+      padding: 0;
+   }
+}
