@@ -10,20 +10,31 @@
       text-align: center;
       padding-top: 50px;
    }
-   .wrap-cards {
+   .list-cards {
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: 20px 0;
+      list-style: none;
+      .item {
+         width: 100%;
+         max-width: 300px;
+         margin-bottom: 30px;
+      }
    }
 
    @include mq(sm) {
-      .wrap-cards {
+      .list-cards {
          flex-direction: row;
          flex-wrap: wrap;
          justify-content: space-around;
          align-items: flex-start;
          padding: 20px 10px;
+         .item {
+            width: 50%;
+            max-width: 300px;
+            padding: 0 10px;       
+         }
       }
       .title {
          width: 100%;
@@ -31,9 +42,14 @@
       }
    }
    @include mq(lg) {
-      .wrap-cards {
+      .list-cards {
          justify-content: space-between;
          padding: 20px 0;
+         .item {
+            width: 33%;
+            max-width: 300px;
+            padding: 0;
+         }
       }
       .title {
          text-align: left;
